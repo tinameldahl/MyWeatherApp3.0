@@ -8,3 +8,52 @@ div.col-lg-8 {
   margin-top: 20px;
   padding: 2% !important;
 }
+
+.fahrenheit {
+  font-size: 16px;
+  color: gray;
+}
+
+.celcius {
+  font-size: 16px;
+  color: gray;
+}
+
+.wind-humidity {
+  font-size: 14px;
+  color: gray;
+}
+
+.temperature {
+  font-size: 50px;
+}
+
+.weather-description {
+  color: gray;
+}
+
+.city {
+  font-size: 35px;
+}
+
+.time-date {
+  color: gray;
+  text-align: right;
+}
+
+.temperature i {
+  color: orange;
+}
+
+.footer-text {
+  font-size: 14px;
+  color: gray;
+}
+
+.footer-text a {
+  color: Gray;
+}
+
+.footer-text a:hover {
+  color: rgb(101, 15, 43);
+}
