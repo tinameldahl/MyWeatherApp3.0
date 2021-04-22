@@ -13,17 +13,18 @@
 <body class="content">
 <div class="col-lg-8 mx-auto p-3 py-md-5 box">
     <header class="d-flex align-items-center pb-3 mb-5 border-bottom">
-        <p class="time-date">Current time, day, month and year</p>
+        <p class="time-date"> Current time, day, month and year</p>
     </header>
 
     <h1>Weather search?</h1>
     <p class="fs-5 col-md-8">
-        Text and form place
+                <form class="search-field" id="search-form">
+                    <input type="text" id="search-input" placeholder="Enter a city" autofocus="on" autocomplete="off" />
+                    <input type="submit" value="search" class="submit-button" />
+                </form>
     </p>
 
-    <div class="mb-5">
-        <a href="#" class="btn btn-primary btn-lg px-4">Search</a>
-    </div>
+
 
     <hr class="col-3 col-md-12 mb-5">
 
@@ -58,7 +59,9 @@
     </div>
 
     <footer class="pt-5 my-5 text-muted border-top">
-       <p class="footer-text"> My Weather App 3.0 - a project by Tina Meldahl | <a href="" target="_blank" rel="nofollow">GitHub link</a> | Hosted on <a href="" target="_blank" rel="nofollow">Netlify</a></p>
+       <p class="footer-text"> My Weather App 3.0 - a project by Tina Meldahl 
+           <br>
+        <a href="" target="_blank" rel="nofollow">GitHub link</a> | Hosted on <a href="" target="_blank" rel="nofollow">Netlify</a></p>
     </footer>
 </div>
     <script src="src/script .js"></script>

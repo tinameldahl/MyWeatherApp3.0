@@ -57,3 +57,25 @@ div.col-lg-8 {
 .footer-text a:hover {
   color: rgb(101, 15, 43);
 }
+
+form.search-field input[type="text"] {
+  padding: 10px;
+  font-size: 17px;
+  float: left;
+  width: 80%;
+  background: #f1f1f1;
+  margin-bottom: 5%;
+  border-radius: 5px 0px 0px 5px;
+  border: 1px solid blue;
+}
+
+.submit-button {
+  border-radius: 5px;
+  background-color: blue;
+  color: white;
+  padding: 10px;
+  margin-left: 5px;
+  font-size: 17px;
+  border: 1px solid blue;
+  text-transform: capitalize;
+}
