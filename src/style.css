@@ -85,7 +85,7 @@ form.search-field input[type="text"] {
   text-transform: capitalize;
 }
 
-#current-location {
+button {
   border-radius: 5px;
   background-color: blue;
   color: white;

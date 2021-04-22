@@ -76,3 +76,66 @@ let monthElement = document.querySelector(".date-month");
 monthElement.innerHTML = `${date} of ${month} - ${year}`;
 
 
+// Temperature, city and country
+
+function showTemp(response) {
+  // Function showTemp
+
+  let temperature = Math.round(response.data.main.temp); // Round the degree to whole number
+  let mainTemperature = document.querySelector(".temperature"); // Say that mainTemperature will be shown in the class MainTemperature
+  mainTemperature.innerHTML = `${temperature}°C `; // Defines that mainTemperature is let = temperature
+
+  let city = response.data.name; // Gets the city name
+  let country = response.data.sys.country; // Gets the country code
+  let cityCountry = document.querySelector(".city"); // Says that cityCountry will be shown in the class city
+  cityCountry.innerHTML = `${city} `; // Defines that cityCountry is the city and coountry
+
+  document.querySelector("#humidity").innerHTML = response.data.main.humidity;
+  document.querySelector("#wind").innerHTML = Math.round(
+    response.data.wind.speed
+  );
+
+  let description = response.data.weather[0].description; // Gets the weather description
+  let weatherDescription = document.querySelector(".weather-description"); // Says that weatherDescription will be shown in the ID temperature-description
+  weatherDescription.innerHTML = `${description} `; // Defines that weatherDescription is description
+}
+
+// Search function
+function searchCity(event) {
+  event.preventDefault();
+  let cityInput = document.querySelector("#search-input").value;
+  let units = "Metric";
+  let apiKey = "7efef5260931c8f50230e9ac708a39f6";
+  let apiUrl = `https://api.openweathermap.org/data/2.5/weather?q=${cityInput}&appid=${apiKey}&units=${units}`;
+  axios.get(apiUrl).then(showTemp);
+}
+
+let form = document.querySelector("#search-form");
+form.addEventListener("submit", searchCity);
+
+
+
+
+
+
+
+// Function that finds latitude and longitude, and then shows temp for that place
+function showPosition(position) {
+  let lat = position.coords.latitude;
+  let lon = position.coords.longitude;
+  let units = "Metric";
+  let apiKey = "7efef5260931c8f50230e9ac708a39f6";
+  let apiUrl = `https://api.openweathermap.org/data/2.5/weather?lat=${lat}&lon=${lon}&appid=${apiKey}&units=${units}`;
+  axios.get(apiUrl).then(showTemp);
+}
+
+// Function that finds your current position
+function getCurrentPosition(event) {
+  event.preventDefault();
+  navigator.geolocation.getCurrentPosition(showPosition);
+}
+
+// Defines that the function getCurrentPosition will happen when you click the button
+let button = document.querySelector("button");
+button.addEventListener("click", getCurrentPosition);
+
