@@ -114,11 +114,6 @@ let form = document.querySelector("#search-form");
 form.addEventListener("submit", searchCity);
 
 
-
-
-
-
-
 // Function that finds latitude and longitude, and then shows temp for that place
 function showPosition(position) {
   let lat = position.coords.latitude;
@@ -126,6 +121,7 @@ function showPosition(position) {
   let units = "Metric";
   let apiKey = "7efef5260931c8f50230e9ac708a39f6";
   let apiUrl = `https://api.openweathermap.org/data/2.5/weather?lat=${lat}&lon=${lon}&appid=${apiKey}&units=${units}`;
+  
   axios.get(apiUrl).then(showTemp);
 }
 
