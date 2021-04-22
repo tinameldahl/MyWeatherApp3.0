@@ -28,6 +28,10 @@ div.col-lg-8 {
   font-size: 50px;
 }
 
+.temperature-head {
+  font-size: 50px;
+}
+
 .weather-description {
   color: gray;
 }
