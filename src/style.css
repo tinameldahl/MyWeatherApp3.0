@@ -41,6 +41,11 @@ div.col-lg-8 {
   text-align: right;
 }
 
+.date-month {
+  color: gray;
+  text-align: right;
+}
+
 .temperature i {
   color: orange;
 }
