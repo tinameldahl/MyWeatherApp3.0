@@ -74,3 +74,5 @@ let month = months[monthLet.getMonth()];
 // Inserts date, month and year into the HTML document
 let monthElement = document.querySelector(".date-month");
 monthElement.innerHTML = `${date} of ${month} - ${year}`;
+
+
