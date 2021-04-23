@@ -34,6 +34,7 @@ div.col-lg-8 {
 
 .weather-description {
   color: gray;
+  text-transform: capitalize;
 }
 
 .city {
@@ -43,6 +44,7 @@ div.col-lg-8 {
 .time-date {
   color: gray;
   text-align: right;
+  font-size: 14px;
 }
 
 .date-month {
@@ -71,7 +73,7 @@ form.search-field input[type="text"] {
   padding: 10px;
   font-size: 17px;
   float: left;
-  width: 80%;
+  width: 90%;
   background: #f1f1f1;
   margin-bottom: 5%;
   border-radius: 5px 0px 0px 5px;
@@ -102,4 +104,9 @@ button {
 
 h1 {
   padding-top: 20px;
+}
+
+#icon {
+  margin-left: -20px;
+  margin-right: -20px;
 }
