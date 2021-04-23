@@ -98,7 +98,24 @@ function showTemp(response) {
   let description = response.data.weather[0].description; // Gets the weather description
   let weatherDescription = document.querySelector(".weather-description"); // Says that weatherDescription will be shown in the ID temperature-description
   weatherDescription.innerHTML = `${description} `; // Defines that weatherDescription is description
+
+  let iconElement = document.querySelector("#icon");
+  iconElement.setAttribute(
+      "src", 
+      `http://openweathermap.org/img/wn/${response.data.weather[0].icon}@2x.png`
+      );
+
+  iconElement.setAttribute(
+      "alt", 
+      response.data.weather[0].description
+      );
+    
+
 }
+
+
+      
+
 
 // Search function
 function searchCity(event) {
