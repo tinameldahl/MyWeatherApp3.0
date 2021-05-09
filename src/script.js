@@ -163,6 +163,8 @@ function showTemp(response) {
 
 
 // Search function
+
+
 function searchCity(event) {
   event.preventDefault();
   let cityInput = document.querySelector("#search-input").value;
@@ -172,8 +174,16 @@ function searchCity(event) {
   axios.get(apiUrl).then(showTemp);
 }
 
+
+
 let form = document.querySelector("#search-form");
 form.addEventListener("submit", searchCity);
+
+
+
+
+
+
 
 
 // Function that finds latitude and longitude, and then shows temp for that place
@@ -196,4 +206,3 @@ function getCurrentPosition(event) {
 // Defines that the function getCurrentPosition will happen when you click the button
 let button = document.querySelector("button");
 button.addEventListener("click", getCurrentPosition);
-
