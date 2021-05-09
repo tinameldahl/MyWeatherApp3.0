@@ -115,3 +115,28 @@ h1 {
   margin-left: -20px;
   margin-right: -20px;
 }
+
+.forecast-image {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  width: 30%;
+}
+
+.weather-forecast {
+  margin-top: 20px;
+}
+
+.weather-forecast-date {
+  text-align: center;
+  color: grey;
+}
+
+.weather-forecast-temperatures {
+  text-align: center;
+  color: grey;
+}
+
+.weather-forecast-temperature-min {
+  color: lightgray;
+}
