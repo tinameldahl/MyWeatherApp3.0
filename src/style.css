@@ -138,5 +138,9 @@ h1 {
 }
 
 .weather-forecast-temperature-min {
-  color: lightgray;
+  color: gray;
+}
+
+.weather-forecast-temperature-max {
+  color: black;
 }
